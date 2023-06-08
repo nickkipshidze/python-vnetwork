@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>VNetwork</title>
+        <style>
+            * {
+                padding: 0;
+                margin: 0;
+            }
+
+            body {
+                display: flex;
+                height: 100vh;
+                background-color: black;
+                justify-content: center;
+                align-items: center;
+                overflow: hidden;
+            }
+
+            svg {
+                position: absolute;
+                z-index: -1;
+            }
+
+            .logo-body {
+                display: flex;
+                width: 512px;
+                height: 512px;
+                align-items: center;
+                justify-content: center;
+                background-color: #22272E;
+                border-radius: 150px;
+                transform: rotate(45deg);
+
+                animation-name: body-fade-in;
+                animation-duration: 4s;
+            }
+
+            .logo-body > .content {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                transform: rotate(-45deg);
+            }
+
+            .logo-body > .content > h1 {
+                text-align: center;
+                white-space: nowrap;
+                overflow: hidden;
+                color: #539BF5;
+                font-family: Hermit;
+                font-size: 90px;
+
+                animation-name: typewriter;
+                animation-duration: 5s;
+            }
+
+            @keyframes body-fade-in {
+                0% { 
+                    opacity: 0; 
+                    transform: scale(0.1) rotate(0deg);
+                }
+                100% { 
+                    opacity: 1; 
+                    transform: scale(1) rotate(-315deg); 
+                }
+            }
+
+            @keyframes typewriter{
+                0% {
+                    width: 0;
+                }
+                100% {
+                    width: 100%;
+                }
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="logo-body">
+            <svg width="512" height="512">
+                <line x1="256" y1="0" x2="256" y2="256" stroke="#2D333B" stroke-width="120"/>
+                <line x1="0" y1="256" x2="256" y2="256" stroke="#2D333B" stroke-width="120"/>
+                <circle cx="256" cy="256" r="60" fill="#2D333B" />
+            </svg>
+
+            <div class="content">
+                <h1>V-Network</h1>
+            </div>
+        </div>
+    </body>
+</html>
