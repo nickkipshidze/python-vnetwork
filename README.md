@@ -1,6 +1,8 @@
 # VNetwork
 Its a Python library that helps you build a neural network and train it.
 
+Yeah you could use Tensorflow, Keras, PyTorch or scikit-learn but I wanted to write my own for fun.
+
 <br>
 
 ## Use case
@@ -16,7 +18,7 @@ And here the neural network is presented with a circle and the output neuron is 
 <br>
 
 ## Usage
-VNetwork has `Network` class which takes `layerplan` argument on initialization. `layerplan` aregument is a 2D array of lists that contain arguments for creating a `Node` object.
+VNetwork has `Network` class which takes `layerplan` argument on initialization. `layerplan` aregument is a 3D array of lists that contain arguments for creating a `Node` object.
 
 Heres an example of creating 3 layer neural network:
 ```Python
