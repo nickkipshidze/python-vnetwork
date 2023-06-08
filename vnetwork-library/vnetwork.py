@@ -34,13 +34,13 @@ class CONFUNC:
     """
     
     def FULL(layers: list) -> list:
-        """Connect every N layer's nodes with all of N+1 layer's nodes
+        """Connect every N layer's nodes with all of N-1 layer's nodes
 
         Args:
-            layers (list): 2D array of all layers
+            layers (list): 3D array of all layers
 
         Returns:
-            list: 2D array of all layers with connections setup
+            list: 3D array of all layers with connections setup
         """
         
         for layer in range(1, len(layers)):
@@ -85,7 +85,7 @@ class Network:
         """__init__
 
         Args:
-            layerplan (list, optional): 2D array of pseudo neural network. Defaults to [].
+            layerplan (list, optional): 3D array of pseudo neural network. Defaults to [].
             confunc (_type_, optional): connection function. Defaults to CONFUNC.FULL.
         """
         
@@ -101,10 +101,10 @@ class Network:
         """Convert pseudo network to a neural network
 
         Args:
-            layerplan (list): 2D array of pseudo neural network
+            layerplan (list): 3D array of pseudo neural network
 
         Returns:
-            list: 2D array of layers and nodes
+            list: 3D array of layers and nodes
         """
         
         network: list = []
@@ -134,11 +134,11 @@ class Network:
         """Connect network layer's nodes
 
         Args:
-            layers (list): 2D array of layers and nodes
+            layers (list): 3D array of layers and nodes
             confunc (_type_): connection function
 
         Returns:
-            list: 2D array of layers and nodes with connections
+            list: 3D array of layers and nodes with connections
         """
         
         return confunc(layers)
