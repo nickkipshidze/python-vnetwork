@@ -3,6 +3,16 @@
 #     Recognise only rectangles and not circles
 #     Expect bad and not reusable code
 #     This program was ment to test the VNetwork library
+#
+# Note:
+#     Make sure you are running the Python code 
+#     from python-vnetwork directory for hardcoded 
+#     paths to work
+#
+
+import sys
+
+sys.path.append("./vnetwork-library/")
 
 import pygame, os, random, time, vnetwork, interface
 from vnetwork import Network
