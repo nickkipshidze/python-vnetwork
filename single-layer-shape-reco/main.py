@@ -86,11 +86,15 @@ def adjust_network(network: Network, shapes: dict) -> None:
         while network.evaluate()[0].state > network.layers[1][0].bias:
             network.layers[0] = adjust_bias(network.layers[0], network.current_shape, power = -rint(1, 20))
 
-def keybind(network: Network, shapes: dict) -> None:
+def keybind(network: Network, shapes: dict, shapes_test: dict) -> None:
     keys: pygame.key.ScancodeWrapper = pygame.key.get_pressed()
 
     if keys[pygame.K_SPACE]:
         next_shape(network, shapes)
+        time.sleep(0.5)
+    
+    if keys[pygame.K_e]:
+        next_shape(network, shapes_test)
         time.sleep(0.5)
     
     if keys[pygame.K_RETURN]:
@@ -106,11 +110,12 @@ def keybind(network: Network, shapes: dict) -> None:
 def main() -> None:
     network: Network = init_network()
     shapes: dict = init_shapes("./single-layer-shape-reco/shapes/")
+    shapes_test: dict = init_shapes("./single-layer-shape-reco/shapes-test/")
 
     interface.network = network
 
     while interface.update():
-        keybind(network, shapes)
+        keybind(network, shapes, shapes_test)
     
     interface.close()
 
