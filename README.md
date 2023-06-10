@@ -15,6 +15,8 @@ Trained neural network is presented with an "image" of a rectangle and the outpu
 And here the neural network is presented with a circle and the output neuron is set to 0:
 ![Preview](screenshots/shape-reco-2.png)
 
+Also dont look at the code for `single-layer-shape-reco`. Its just a proof of concept.
+
 <br>
 
 ## Usage
