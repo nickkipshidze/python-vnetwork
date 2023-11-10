@@ -1,21 +1,22 @@
 # VNetwork
-Its a Python library that helps you build a neural network and train it.
+VNetwork is a Python library which helps you build a neural network and train it.
 
-Yeah you could use Tensorflow, Keras, PyTorch or scikit-learn but I wanted to write my own for fun.
+Yeah you could use Tensorflow, Keras, PyTorch or scikit-learn but I wanted to write my own library, for fun.
 
 <br>
 
 ## Use case
-`single-layer-shape-reco` is a Python program that uses VNetwork module to differentiate rectangles from circles.
+[`single-layer-shape-reco`](./single-layer-shape-reco) is a Python program that uses VNetwork module to differentiate rectangles from circles.
 
 Here input layers are arranged in 32x32 grid and their colored by their state value which can be anything from 0 (black) to 1 (white). 
+On the right we have another 32x32 grid which shows the biases of nodes.
 Trained neural network is presented with an "image" of a rectangle and the output neuron value is set to 1:
 ![Preview](screenshots/shape-reco-1.png)
 
 And here the neural network is presented with a circle and the output neuron is set to 0:
 ![Preview](screenshots/shape-reco-2.png)
 
-Also dont look at the code for `single-layer-shape-reco`. Its just a proof of concept.
+Also dont look at the code for that (its bad). Its just a proof of concept.
 
 <br>
 
