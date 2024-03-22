@@ -3,6 +3,10 @@ VNetwork is a Python library which helps you build a neural network and train it
 
 Yeah you could use Tensorflow, Keras, PyTorch or scikit-learn but I wanted to write my own library, for fun.
 
+> **Warning**
+> 
+> This is a perfect example of what not to do. Only thing you can take from this, is maybe the code style. Don't build your neural networks like this. It is very inefficient. **- Nick from the future**
+
 ## Use case
 [`single-layer-shape-reco`](./single-layer-shape-reco) is a Python program that uses VNetwork module to differentiate rectangles from circles.
 
